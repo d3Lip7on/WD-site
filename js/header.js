@@ -1,3 +1,6 @@
+
+// burger click handled
+
 let headerTopik = document.querySelector('.header__topik');
 let burger = document.querySelector('.burger');
 let menu = document.querySelector('.menu');
@@ -22,10 +25,4 @@ burger.onclick = ()=>{
             menu.classList.remove('menu_collapsed-opening');
         }
     }
-
-
-
 }
-
-
-
