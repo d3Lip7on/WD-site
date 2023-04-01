@@ -12,7 +12,54 @@
         align-items: center;
 
         padding-top: 57px;
+
+        margin-bottom: 129px;
+
+        &_collapsed{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 40px;
+    
+            & .header__logo{
+                justify-self: left;
+
+            }
+    
+            & .header__burger{
+                justify-self: right;
+                grid-column-start: 2;
+                grid-row-start: 1;
+            }
+    
+            & .header__menu{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                -ms-grid-column-span: 2;
+            }
+    
+    
+        }
+
+
+        @media (max-width: 1200px){
+            margin-bottom: 100px;
+        }
+
+        @media (max-width: 870px){
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 600px){
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 450px){
+            margin-bottom: 40px;
+        }
     }
+
+    
 
     &__logo{
     font-family: 'Revalia';
@@ -25,35 +72,30 @@
     text-align: center;
 
     color: @accented;
+
+    cursor: pointer;
+
     }
 
-    &__menu{
-        display: flex;
-    }
     &__content{
         display: flex;
-        justify-content: center;
         align-items: center;
-        padding-top: 129px;
+
         padding-left: 79px;
         margin-bottom: 146px;
 
         @media (max-width: 1200px){
-            padding-top: 80px;
             padding-left: 0;
             flex-direction: column;
         }
     }
     &__image{
-        // object-fit: cover;
-        // object-position: center;
-
-        // width: 100%;
-        // height: 100%;
-
         max-width: 357px;
         max-height: 233px;
 
+        @media (max-width: 500px){
+            width: 80%;
+        }
         
     }
     &__info{
@@ -78,46 +120,34 @@
     color: #000000;
 
     margin-bottom: 34px;
+
+    @media (max-width: 500px){
+        font-size: 2em;
+        margin-bottom: 0px;
+    }
+
+    @media (max-width: 350px){
+        font-size: 1.5em;
+    }
     }
     &__text{
         text-align: left;
-        margin-bottom: 52px;
+        margin-bottom: 26px;
+
+        @media (max-width:1200px){
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        @media (max-width: 500px){
+            margin-bottom: 25px;
+        }
     }
     &__button{
         
     }
 }
 
-.menu {
-    display: flex;
-    &__item{
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.1em;
 
-        
-
-        margin-right: 42px;
-
-        text-transform: uppercase;
-
-        a{
-            text-decoration: none;
-            color: #000000;
-        }
-
-        &:first-child a{
-            color: @accented;
-        }
-
-        &:last-child{
-            margin-right: 10px;
-        }
-    }
-}
 
 
 

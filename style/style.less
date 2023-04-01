@@ -1,4 +1,5 @@
 @import "var.less";
+@import "animation.less";
 
 // font-family: 'Revalia', cursive;
 // font-family: 'Roboto', sans-serif;
@@ -95,6 +96,8 @@ header, section, footer{
     color: #727272;
 }
 .button{
+    cursor: pointer;
+
     width: 225px;
     height: 65px;
 
@@ -110,6 +113,121 @@ header, section, footer{
     letter-spacing: 0.1em;
 
     color: #FFFFFF;
+
+    transition: background-color 200ms;
+
+    &:hover{
+        background-color: lighten(@accented, 10%);
+    }
 }
+
+.burger{
+    display: none;
+    
+
+    width: 45px;
+    height: 45px;
+
+    background-color: @accented;
+
+    &__line{
+        background-color: #fff;
+        width: 20px;
+        height: 4px;
+        margin-bottom: 4px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: 870px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+}
+
+.menu {
+    display: flex;
+    @media (max-width: 870px){
+      display: none;
+  }
+
+
+    &__item{
+        border: none;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.1em;
+
+        color: #000000;
+
+        margin-right: 42px;
+
+        text-transform: uppercase;
+
+
+        &:first-child a{
+            color: @accented;
+        }
+
+        &:last-child{
+            margin-right: 10px;
+        }
+    }
+
+    &_collapsed{
+      background-color: inherit;
+    
+      display: flex;
+    
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    
+      & .menu__item{
+    
+        background-color: @accented;
+        border-radius: 5px;
+        
+        padding-top: 3px;
+    
+        width: 100%;
+        max-width: 60%;
+        text-align: center;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+
+        color: #fff;
+        &:last-child{
+          margin-right: 0;
+        }
+
+    
+      }
+
+      &-opening{
+        animation: menu-appear 800ms ease;
+      }
+      &-closing{
+        animation: menu-appear 700ms ease-in-out reverse;
+      }
+    
+    }
+
+    
+}
+
 @import "header.less";
 
