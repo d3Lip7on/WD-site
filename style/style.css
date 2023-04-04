@@ -143,6 +143,7 @@ footer {
   }
 }
 .menu__item {
+  cursor: pointer;
   border: none;
   font-family: 'Roboto';
   font-style: normal;
@@ -356,7 +357,7 @@ footer {
 }
 .achivments__inner {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 94px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 50px;
@@ -403,4 +404,75 @@ footer {
 .achivments__text {
   text-align: left;
   color: #FFFFFF;
+}
+.skills__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 102px;
+  padding-bottom: 102px;
+}
+@media (max-width: 1200px) {
+  .skills__inner {
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+@media (max-width: 600px) {
+  .skills__inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 400px) {
+  .skills__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.skills__info {
+  width: 100%;
+  max-width: 445px;
+}
+@media (max-width: 1200px) {
+  .skills__info {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 450px) {
+  .skills__info {
+    margin-bottom: 60px;
+  }
+}
+.skills__title {
+  text-align: left;
+  margin-bottom: 52px;
+}
+@media (max-width: 400px) {
+  .skills__title {
+    text-align: center;
+  }
+}
+.skills__item {
+  margin-bottom: 30px;
+}
+.skills__item:last-child {
+  margin-bottom: 0;
+}
+.skills__skill {
+  text-align: left;
+  margin-bottom: 11px;
+}
+.skills__line {
+  height: 4px;
+  width: 100%;
+  max-width: 445px;
+  background: #C4C4C4;
+}
+.skills__line_accented {
+  width: 77%;
+  background: #34547A;
+}
+.skills__img {
+  max-width: 555px;
 }
