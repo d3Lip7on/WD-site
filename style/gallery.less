@@ -1,0 +1,51 @@
+//main: style.less
+
+.gallery {
+    padding: 0;
+    &__inner{
+        padding-top: 28px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+        
+        @media (max-width: 960px){
+            gap: 30px;
+            grid-template-columns: 1fr;
+        }
+        
+        @media (max-width: 600px){
+            gap: 15px;
+        }
+
+        
+    }
+
+    &__item{
+        position: relative;
+
+        @media (max-width: 960px){
+            margin: 0 auto;
+            width: 80%;
+        }
+        & .covering{
+            display: none;
+        }
+
+        &_viewed{
+            & .covering{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: rgba(52, 84, 122, 80%);
+
+            }
+        }
+    }
+}

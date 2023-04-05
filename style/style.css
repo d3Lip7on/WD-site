@@ -96,7 +96,7 @@ footer {
   cursor: pointer;
   width: 225px;
   height: 65px;
-  background-color: #34547A;
+  background-color: #34547a;
   border: none;
   font-family: 'Roboto';
   font-style: normal;
@@ -115,7 +115,7 @@ footer {
   display: none;
   width: 45px;
   height: 45px;
-  background-color: #34547A;
+  background-color: #34547a;
 }
 .burger__line {
   background-color: #fff;
@@ -156,7 +156,7 @@ footer {
   text-transform: uppercase;
 }
 .menu__item:first-child {
-  color: #34547A;
+  color: #34547a;
 }
 .menu__item:last-child {
   margin-right: 0px;
@@ -169,7 +169,7 @@ footer {
   align-items: center;
 }
 .menu_collapsed .menu__item {
-  background-color: #34547A;
+  background-color: #34547a;
   border-radius: 5px;
   padding-top: 3px;
   width: 100%;
@@ -259,7 +259,7 @@ footer {
   line-height: 60px;
   /* identical to box height */
   text-align: center;
-  color: #34547A;
+  color: #34547a;
   cursor: pointer;
 }
 .header__content {
@@ -353,7 +353,7 @@ footer {
   margin: 0 auto;
 }
 .achivments {
-  background-color: #34547A;
+  background-color: #34547a;
 }
 .achivments__inner {
   padding-top: 100px;
@@ -471,10 +471,13 @@ footer {
 }
 .skills__line_accented {
   width: 77%;
-  background: #34547A;
+  background: #34547a;
 }
 .skills__img {
   max-width: 555px;
+}
+.work {
+  background-color: #EEEFF1;
 }
 .work__inner {
   padding-top: 100px;
@@ -482,7 +485,7 @@ footer {
 }
 @media (max-width: 1000px) {
   .work__inner {
-    padding-top: 0;
+    padding-top: 50px;
   }
 }
 .work__title {
@@ -507,4 +510,46 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.gallery {
+  padding: 0;
+}
+.gallery__inner {
+  padding-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+}
+@media (max-width: 960px) {
+  .gallery__inner {
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .gallery__inner {
+    gap: 15px;
+  }
+}
+.gallery__item {
+  position: relative;
+}
+@media (max-width: 960px) {
+  .gallery__item {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+.gallery__item .covering {
+  display: none;
+}
+.gallery__item_viewed .covering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(52, 84, 122, 0.8);
 }
